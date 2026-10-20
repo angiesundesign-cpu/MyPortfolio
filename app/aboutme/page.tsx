@@ -1,51 +1,64 @@
 import type { Metadata } from 'next';
 import { Footer } from '@/components/Footer';
 import { SiteHeader } from '@/components/SiteHeader';
+import { PartnerMarquee } from '@/components/PartnerMarquee';
 
 export const metadata: Metadata = { title: 'About Me | AngieSun' };
 
-const portrait = '/assets/angie-portrait.jpg';
+const honors = [
+  'Rotman Design Challenges 2024 - Third Place',
+  'Hult Prize 2024 - Global Summits Top 1%',
+  'Parsons School of Design 2023–2025 - Scholarship',
+  'Green Concept Award 2021 - Nominee of the Year',
+  'Ringle Galleries Undergraduate Design Exhibition 2021 - ID First Place',
+];
+const employers = ['Search For High School', 'Nanchang Yisheng Auto Parts Ltd.', 'Flexsteel Industries, Inc.'];
 
 export default function AboutPage() {
   return (
-    <main>
+    <main className="about-page">
       <SiteHeader />
-      <section className="about-hero">
-        <div>
-          <p>Keep Exploring and Crafting</p>
-          <h1>A Sustainable<br />Future.</h1>
+      <header className="about-intro">
+        <p>Keep Exploring and Crafting</p>
+        <h1>A Sustainable Future.</h1>
+      </header>
+
+      <section className="about-overview" aria-label="Profile and education">
+        <h2 className="about-label"><span aria-hidden="true">↱</span> Profile</h2>
+        <figure className="profile-card">
+          <img src="/assets/angie-portrait.jpg" alt="Angie Sun" />
+          <figcaption>Angie Sun</figcaption>
+        </figure>
+        <h2 className="about-label"><span aria-hidden="true">↱</span> Education</h2>
+        <div className="education-cards">
+          <article className="education-card">
+            <div className="school-name"><img src="/assets/logos/parsons.png" alt="The New School Parsons" /></div>
+            <p>Master of Science</p>
+            <h3>Strategic Design and Management</h3>
+            <div className="education-meta"><span>2023–2025</span><span>GPA 3.83</span></div>
+          </article>
+          <article className="education-card">
+            <div className="school-name"><img src="/assets/logos/purdue.png" alt="Purdue University" /></div>
+            <p>Bachelor of Fine Art</p>
+            <h3>Industrial and Product Design</h3>
+            <div className="education-meta"><span>2017–2021</span><span>GPA 3.54</span></div>
+          </article>
         </div>
-        <img src={portrait} alt="Angie Sun" />
       </section>
 
-      <section className="about-sections">
-        <article>
-          <h2>Profile</h2>
-          <div><h3>Angie Sun</h3><p>Industrial designer working across product, furniture, strategy, research, sustainability, and digital experiences.</p></div>
-        </article>
-        <article>
-          <h2>Education</h2>
-          <div className="timeline-row"><h3>Master of Science</h3><p>Parsons School of Design<br />2023–2025 · GPA 3.83</p></div>
-          <div className="timeline-row"><h3>Bachelor of Fine Art</h3><p>Purdue University<br />2017–2021 · GPA 3.54</p></div>
-        </article>
-        <article>
-          <h2>Work Experience</h2>
-          <div className="timeline-row"><h3>Search For High School</h3><p>Design and product strategy</p></div>
-          <div className="timeline-row"><h3>Nanchang Yisheng Auto Parts Ltd.</h3><p>Industrial design experience</p></div>
-          <div className="timeline-row"><h3>Flexsteel Industries, Inc.</h3><p>Furniture and product design</p></div>
-          <a className="green-pill" href="/assets/angie-resume.pdf" target="_blank" rel="noreferrer">Download my Resume</a>
-        </article>
-        <article>
-          <h2>Honor</h2>
-          <ul className="honor-list">
-            <li>Rotman Design Challenges 2024 — Third Place</li>
-            <li>Hult Prize 2024 — Global Summits Top 1%</li>
-            <li>Parsons School of Design 2023–2025 — Scholarship</li>
-            <li>Green Concept Award 2021 — Nominee of the Year</li>
-            <li>Ringle Galleries Undergraduate Design Exhibition 2021 — ID First Place</li>
-          </ul>
-        </article>
+      <section className="about-detail about-experience" aria-labelledby="experience-title">
+        <h2 className="about-label" id="experience-title"><span aria-hidden="true">↱</span><span>Work<br />Experience</span></h2>
+        <ul className="about-lines">{employers.map((name) => <li key={name}>{name}</li>)}</ul>
       </section>
+      <section className="about-partners" aria-labelledby="partners-title">
+        <h2 id="partners-title">Who I worked with before <span aria-hidden="true">↓</span></h2>
+        <PartnerMarquee />
+      </section>
+      <section className="about-detail about-honors" aria-labelledby="honor-title">
+        <h2 className="about-label" id="honor-title"><span aria-hidden="true">↱</span> Honor</h2>
+        <ul className="about-lines">{honors.map((honor) => <li key={honor}>{honor}</li>)}</ul>
+      </section>
+      <div className="about-resume"><a href="/assets/angie-resume.pdf" target="_blank" rel="noreferrer">Download my Resume</a></div>
       <Footer />
     </main>
   );

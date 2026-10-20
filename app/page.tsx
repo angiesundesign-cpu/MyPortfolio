@@ -3,6 +3,10 @@ import { SiteHeader } from '@/components/SiteHeader';
 import { expertise, getProject } from '@/lib/portfolio-data';
 
 const featuredSlugs = ['bsc', 'waterfall', 'boulder', 'fillin', 'emard'];
+const homeCovers: Record<string, string> = {
+  bsc: '/assets/home/blank-street-coffee.png',
+  emard: '/assets/home/emard-delta-expanded.png',
+};
 
 export default function Home() {
   const featured = featuredSlugs.map((slug) => getProject(slug)).filter(Boolean);
@@ -18,8 +22,8 @@ export default function Home() {
 
       <section className="featured-mosaic" id="featured" aria-label="Featured work">
         {featured.map((project) => project ? (
-          <a className="mosaic-card" href={`/${project.slug}`} key={project.slug}>
-            <img src={project.cover} alt={project.cardTitle} loading="lazy" />
+          <a className={`mosaic-card mosaic-card-${project.slug}`} href={`/${project.slug}`} key={project.slug}>
+            <img src={homeCovers[project.slug] ?? project.cover} alt={project.cardTitle} loading="lazy" />
             <span>{project.cardTitle}</span>
           </a>
         ) : null)}
