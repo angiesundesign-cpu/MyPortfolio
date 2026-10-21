@@ -1,0 +1,4 @@
+:HL["/_next/static/chunks/0k-8_711g5pzp.css","style"]
+:HL["/assets/wix/4ed940_d8cbb2b93e51437fb0873ff6a695890b.png","image"]
+:HL["/assets/wix/4ed940_034440618fcc4048aa6b550a7465f185.png","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"slug","param":{"type":"d","key":"materials-and-manufacture","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"21SmCJaW_9Lhe1CtW7ah1"}

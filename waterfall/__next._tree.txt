@@ -1,0 +1,4 @@
+:HL["/_next/static/chunks/0k-8_711g5pzp.css","style"]
+:HL["/assets/wix/4ed940_6a741e27d54f4c51a6e987be36b06e46.jpg","image"]
+:HL["/assets/wix/4ed940_e81088c6b8ff4ca09819a266aa5a4fc7.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"slug","param":{"type":"d","key":"waterfall","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"21SmCJaW_9Lhe1CtW7ah1"}

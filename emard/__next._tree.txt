@@ -1,0 +1,4 @@
+:HL["/_next/static/chunks/0k-8_711g5pzp.css","style"]
+:HL["/assets/wix/4ed940_ac2a9ec9baf14389a6df0dc8fe64c1c7.png","image"]
+:HL["/assets/wix/4ed940_7b4e7211253e4ab891110c10d795d83e.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"slug","param":{"type":"d","key":"emard","siblings":null},"prefetchHints":0,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}}}},"staleTime":300,"buildId":"21SmCJaW_9Lhe1CtW7ah1"}
