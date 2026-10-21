@@ -3,7 +3,7 @@ name: Build EdgeOne Static Site
 on:
   push:
     branches:
-      - main
+      - edgeone-deploy
   workflow_dispatch:
 
 permissions:
